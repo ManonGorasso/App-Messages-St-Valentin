@@ -1,4 +1,96 @@
-/* style pour smartphone - mode par DEFAUT - grille verticale */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400;1,500&family=Sail&family=Telex&display=swap');
+
+* {
+    font-family: 'Telex', sans-serif;
+    font-weight: 300;
+    font-size: 16px;     
+    color: rgb(75,75,75);
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;         
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(250, 172, 168);
+    background-image: linear-gradient(
+        19deg, 
+        rgb(250, 172, 168) 0%,
+        rgb(221, 214, 243) 100%);         
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-width: 260px;
+    max-width: 75vw;
+    height: 100vh;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    background-color: #ffff;
+    box-shadow: 0px 0px 25px 10px rgba(110, 106, 123, 0.25);
+}
+
+h1,
+h2 {
+    text-align: center;
+    color:  rgb(110, 106, 123);
+}
+
+h1 {
+    font-family: 'Sail', cursive;
+    font-size: 3rem;
+}
+
+h2 {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 244px;
+    height: fit-content;
+
+    background-color:  rgb(221, 214, 243);
+    box-shadow: 10px 10px 10px rgba(110, 106, 123, 0.25);
+}
+
+/* Style boutons */
+.btn {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 4rem; 
+    color:  rgb(255, 146, 146);
+    width: 80px;
+    height: 80px;
+    padding: 4px 8px;
+
+    background-color:  rgb(221, 214, 243);
+    border: none;
+}
+
+.btn:hover {
+    cursor: pointer;
+    border: solid 1px rgb(255, 146, 146);
+    background-color:  rgba(250, 172, 168, 0.2);
+}
+
+
+
 
 /* Modal - fond et position */
 .modal {
@@ -7,7 +99,6 @@
     align-items: center;
     position: fixed;          /* Stay in place */
     z-index: 1;               /* Sit on top */
-    padding: 2rem;            /* Location of the box */
     left: 0;
     top: 0;
     width: 100vw;             /* Full width */
@@ -19,9 +110,11 @@
 /* Modal - contenu */
 .modal-content {
     position: relative;
-    background-color: rgb(255, 255, 255);
+    background-color: #EBEBF0;
+    border: solid 2px rgb(250, 172, 168);
+    border-radius: 1rem;
     margin: auto;
-    /* width: 80vw; */
+    width: 260px;
     box-shadow: 0 4px 8px 0 rgba(75, 75, 75, 0.2), 0 6px 20px 0 rgba(75, 75, 75, 0.2);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -42,10 +135,9 @@
 
 /* Close Button */
 .close {
-    color: white;
+    color:   rgb(250, 172, 168);
     float: right;
     font-size: 3rem;
-    font-weight: bold;
 }
 
 .close:hover,
@@ -60,10 +152,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     padding: 0rem 1rem;
-    background-color: rgb(240, 100, 100);
-    color: white;
 }
 
 /* Contenu */
@@ -71,31 +161,4 @@
     padding: 0.5rem 1rem;
     font-size: 2rem;
     text-align: justify;
-}
-
-/* changement taille de police pour tablette */
-@media screen and (min-width: 700px) and (orientation: portrait) {
-    .modal {
-        padding: 3rem;
-    }
-    .modal-body {
-        font-size: 3rem;
-    }
-}
-
-/* changement pour grille horizontale (laptop - dekstop) */
-@media screen and (min-width: 600px) and (orientation:landscape) {
-    .modal {
-        padding: 6rem;
-    }
-    .modal-body {
-        font-size: 1.5rem;
-    }
-}
-
-/* changement taille de police pour grand écran */
-@media screen and (min-width: 800px) and (orientation: landscape) {
-    .modal {
-        padding: 6rem;
-    }
 }
