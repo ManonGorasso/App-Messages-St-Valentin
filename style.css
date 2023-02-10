@@ -25,7 +25,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     min-width: 260px;
     max-width: 75vw;
     height: 100vh;
@@ -39,7 +39,7 @@ main {
 h1,
 h2 {
     text-align: center;
-    color:  rgb(110, 106, 123);
+    color: rgb(110, 106, 123);
 }
 
 h1 {
@@ -61,9 +61,6 @@ h2 {
     align-items: center;
     width: 244px;
     height: fit-content;
-
-    background-color:  rgb(221, 214, 243);
-    box-shadow: 10px 10px 10px rgba(110, 106, 123, 0.25);
 }
 
 /* Style boutons */
@@ -81,16 +78,24 @@ h2 {
 
     background-color:  rgb(221, 214, 243);
     border: none;
+
+    box-shadow: 8px 8px 12px rgba(110, 106, 123, 0.25);
 }
 
 .btn:hover {
     cursor: pointer;
     border: solid 1px rgb(255, 146, 146);
-    background-color:  rgba(250, 172, 168, 0.2);
+    background-color:   rgb(255, 146, 146);
+    color: rgb(221, 214, 243);
 }
 
+#heart-icon {
+    fill: rgb(255, 146, 146);;
+}
 
-
+#heart-icon:hover {
+    fill: rgb(221, 214, 243);
+}
 
 /* Modal - fond et position */
 .modal {
@@ -114,6 +119,7 @@ h2 {
     border: solid 2px rgb(250, 172, 168);
     border-radius: 1rem;
     margin: auto;
+    padding: 0px 1rem;
     width: 260px;
     box-shadow: 0 4px 8px 0 rgba(75, 75, 75, 0.2), 0 6px 20px 0 rgba(75, 75, 75, 0.2);
     -webkit-animation-name: animatetop;
@@ -135,7 +141,7 @@ h2 {
 
 /* Close Button */
 .close {
-    color:   rgb(250, 172, 168);
+    color:rgb(250, 172, 168);
     float: right;
     font-size: 3rem;
 }
@@ -158,7 +164,17 @@ h2 {
 
 /* Contenu */
 .modal-body {
-    padding: 0.5rem 1rem;
+    padding: Opx 1rem;
     font-size: 2rem;
-    text-align: justify;
+    text-align: center;
+    border-top: solid 2px rgb(221, 214, 243);
+    border-bottom: solid 2px rgb(221, 214, 243);
+}
+
+.modal-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0rem 1rem;
 }
