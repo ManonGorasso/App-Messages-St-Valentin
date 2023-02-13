@@ -32,7 +32,7 @@ main {
     padding-left: 40px;
     padding-right: 40px;
 
-    background-color: #ffff;
+    background-color: rgb(235, 235, 245);
     box-shadow: 0px 0px 25px 10px rgba(110, 106, 123, 0.25);
 }
 
@@ -53,6 +53,12 @@ h2 {
     font-style: italic;
 }
 
+strong {
+    font-size: 2rem;
+    color: rgb(250, 172, 168);
+    font-weight: 600;
+}
+
 .container {
     display: flex;
     flex-direction: row;
@@ -63,7 +69,8 @@ h2 {
     height: fit-content;
 }
 
-/* Style boutons */
+/* Button style */
+.btn svg path,
 .btn {
     display: flex;
     flex-direction: row;
@@ -72,6 +79,7 @@ h2 {
 
     font-size: 4rem; 
     color:  rgb(255, 146, 146);
+    fill: rgb(255, 146, 146);
     width: 80px;
     height: 80px;
     padding: 4px 8px;
@@ -82,22 +90,19 @@ h2 {
     box-shadow: 8px 8px 12px rgba(110, 106, 123, 0.25);
 }
 
+.btn:hover svg path,
 .btn:hover {
     cursor: pointer;
-    border: solid 1px rgb(255, 146, 146);
     background-color:   rgb(255, 146, 146);
     color: rgb(221, 214, 243);
-}
-
-#heart-icon {
-    fill: rgb(255, 146, 146);;
-}
-
-#heart-icon:hover {
     fill: rgb(221, 214, 243);
 }
 
-/* Modal - fond et position */
+.btn:active {
+    transform: scale(1.05);
+}
+
+/* Modal - background and position */
 .modal {
     display: none;            /* Hidden by default */
     justify-content: center;
@@ -112,10 +117,10 @@ h2 {
     background-color: rgba(75, 75, 75, 0.4); /* Dark grey w/ opacity */
 }
 
-/* Modal - contenu */
+/* Modal - content */
 .modal-content {
     position: relative;
-    background-color: #EBEBF0;
+    background-color: rgb(235, 235, 240);
     border: solid 2px rgb(250, 172, 168);
     border-radius: 1rem;
     margin: auto;
@@ -162,19 +167,30 @@ h2 {
     padding: 0rem 1rem;
 }
 
-/* Contenu */
+/* Content */
 .modal-body {
-    padding: Opx 1rem;
+    padding: 0px 1rem;
     font-size: 2rem;
+    font-family: 'Sail', cursive;
     text-align: center;
     border-top: solid 2px rgb(221, 214, 243);
     border-bottom: solid 2px rgb(221, 214, 243);
 }
 
+/* Footer */
 .modal-footer {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
-    padding: 0rem 1rem;
+    justify-content: space-evenly;
+    padding: 1rem 1rem;
+}
+
+.modal-footer > p {
+    font-family: 'Sail', cursive;
+}
+
+.modal-footer > img {
+    height: 32px;
+    width: auto;
 }
